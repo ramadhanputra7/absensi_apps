@@ -1,7 +1,7 @@
 name: presence
 version: 1.0.0+1
 publish_to: none
-description: A new Flutter project.
+description: Presence Apps
 environment: 
   sdk: '>=2.17.3 <3.0.0'
 
