@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "959077421220",
+    "project_id": "presence-d9186",
+    "storage_bucket": "presence-d9186.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959077421220:android:743562d533a3cbf6181631",
+        "android_client_info": {
+          "package_name": "com.putra.presence"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959077421220-m3358fi85cjeof8lup4s2brrctftjoqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvBwpYtsQSTN-q7Ilz19DVnSSgHWCooTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959077421220-m3358fi85cjeof8lup4s2brrctftjoqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
