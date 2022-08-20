@@ -188,6 +188,7 @@ class PageIndexController extends GetxController {
     // Test if location services are enabled.
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
+      Get.snackbar('Terjadi Kesalahan', 'Silahkan hidupkan GPS anda');
       // Location services are not enabled don't continue
       // accessing the position and request users of the
       // App to enable the location services.
@@ -198,6 +199,7 @@ class PageIndexController extends GetxController {
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
+        Get.snackbar('Terjadi Kesalahan', 'Silahkan hidupkan GPS anda');
         // Permissions are denied, next time you could try
         // requesting permissions again (this is also where
         // Android's shouldShowRequestPermissionRationale
@@ -214,7 +216,9 @@ class PageIndexController extends GetxController {
 
     if (permission == LocationPermission.deniedForever) {
       // Permissions are denied forever, handle appropriately.
+      Get.snackbar('Terjadi Kesalahan', 'Silahkan hidupkan GPS anda');
       return {'message': 'Silahkan hidupkan layanan GPS', 'error': false};
+
       //return Future.error(
       // 'Location permissions are permanently denied, we cannot request permissions.');
     }

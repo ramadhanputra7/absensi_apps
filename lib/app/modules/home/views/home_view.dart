@@ -78,25 +78,27 @@ class HomeView extends GetView<HomeController> {
                       SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Welcome, ${user['name']}',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Welcome, ${user['name']}',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                          Container(
-                            width: 200,
-                            child: Text(
-                              user['address'] != null
-                                  ? user['address']
-                                  : 'Belum ada lokasi',
+                            Container(
+                              width: 200,
+                              child: Text(
+                                user['address'] != null
+                                    ? user['address']
+                                    : 'Belum ada lokasi',
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -174,7 +176,7 @@ class HomeView extends GetView<HomeController> {
                                       Text('Masuk'),
                                       Text(dataToday?['masuk'] == null
                                           ? '_'
-                                          : '${DateFormat.jms().format(DateTime.parse(dataToday!['masuk']['date']))}'),
+                                          : '${DateFormat.Hms().format(DateTime.parse(dataToday!['masuk']['date']))}'),
                                     ],
                                   ),
                                   Container(
